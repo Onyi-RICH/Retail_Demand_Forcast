@@ -17,8 +17,8 @@ This is a **Streamlit web application** that forecasts retail demand for Corpora
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Onyi-RICH/Retail_Demand_Forcast.git](https://github.com/Onyi-RICH/Retail_Demand_Forcast.git)
-    cd your-repo-name
+    git clone https://github.com/Onyi-RICH/Retail_Demand_Forcast.git
+    cd Retail_Demand_Forcast
     ```
 
 2.  **Install dependencies:**
