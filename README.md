@@ -1,5 +1,11 @@
 # 📊 Corporación Favorita Sales Forecasting
 
+<!-- badges: start -->
+[![Project Status: Active – The project has reached a stable, usable
+state and is being
+activelydeveloped](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+<!-- badges: end -->
+
 This is a **Streamlit web application** that forecasts retail demand for Corporación Favorita, one of Ecuador's largest grocery retail chains. The analysis and forecasting within this app are specifically for the Guayas region. The app uses an XGBoost model trained on historical sales data from this region to predict future demand.
 
 ---
