@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/onyiu/Documents/GitHub/Retail_Demand_Forcast/mlflow_results2/431536349637880659/models/m-d3fd525ad58b4d26b5d79fcec220a730/artifacts
+creation_timestamp: 1755743582811
+experiment_id: '431536349637880659'
+last_updated_timestamp: 1755743587705
+model_id: m-d3fd525ad58b4d26b5d79fcec220a730
+model_type: null
+name: model
+source_run_id: f61909c14e1e4c9eab43975a51d222ff
+status: 2
+status_message: null

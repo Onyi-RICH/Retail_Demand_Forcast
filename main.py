@@ -88,7 +88,7 @@ else:
 
 valid_features = [col for col in feature_columns if col in series_df.columns]
 X_full = series_df[valid_features].copy()
-X_full = X_full.drop(columns=[c for c in ['unit_sales', 'date', 'id'] if c in X_full.columns])
+X_full = X_full.drop(columns=[c for c in ['unit_sales', 'date'] if c in X_full.columns]) #, 'id'
 
 
 # Predict across the full series, then cut to the selected dates

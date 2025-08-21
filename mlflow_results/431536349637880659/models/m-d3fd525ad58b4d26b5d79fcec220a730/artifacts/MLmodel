@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/onyiu/Documents/GitHub/Retail_Demand_Forcast/mlflow_results2/431536349637880659/models/m-d3fd525ad58b4d26b5d79fcec220a730/artifacts
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.12.5
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: xgb
+    xgb_version: 3.0.4
+mlflow_version: 3.3.1
+model_id: m-d3fd525ad58b4d26b5d79fcec220a730
+model_size_bytes: 229902
+model_uuid: m-d3fd525ad58b4d26b5d79fcec220a730
+prompts: null
+run_id: f61909c14e1e4c9eab43975a51d222ff
+utc_time_created: '2025-08-21 02:33:02.860610'

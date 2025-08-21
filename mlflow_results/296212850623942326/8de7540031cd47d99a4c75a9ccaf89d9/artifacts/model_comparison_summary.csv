@@ -1,3 +1,0 @@
-Stage,Best Params,Best CV MAE,Test MAE (March),Test RMSE (March),Notes
-Baseline,Default,–,0.641,3.4481,"Strong baseline, stable."
-Hypertuned,"{'subsample': 1.0, 'n_estimators': 200, 'max_depth': 7, 'learning_rate': 0.03, 'colsample_bytree': 1.0}",0.5428,0.638,3.4516,"Tiny CV gain, no significant test improvement."

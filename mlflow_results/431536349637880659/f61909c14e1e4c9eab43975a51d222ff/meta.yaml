@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/onyiu/Documents/GitHub/Retail_Demand_Forcast/mlflow_results2/431536349637880659/f61909c14e1e4c9eab43975a51d222ff/artifacts
+end_time: 1755743587732
+entry_point_name: ''
+experiment_id: '431536349637880659'
+lifecycle_stage: active
+run_id: f61909c14e1e4c9eab43975a51d222ff
+run_name: popular-squid-72
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755743582705
+status: 3
+tags: []
+user_id: onyiu
