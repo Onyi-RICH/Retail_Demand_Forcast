@@ -5,6 +5,9 @@ from app import config
 from model.model_utils import load_model
 from data.data_utils import load_data, load_features
 
+import mlflow
+import mlflow.xgboost
+
 # -------------------
 # Trim top spacing
 # -------------------
@@ -40,9 +43,12 @@ st.markdown(
 # -------------------
 # Load model, data, features
 # -------------------
-model = load_model()
 data = load_data()
-feature_columns = load_features()  # list of feature names used to train the model
+
+mlflow.set_tracking_uri("mlflow_results")
+model = load_model() 
+
+feature_columns = load_features()  
 data['date'] = pd.to_datetime(data['date'])
 
 # -------------------
@@ -75,23 +81,15 @@ with col1:
     )
 
 # ---- Build predictions on FULL history for this store-item ----
-# (So lag/rolling features remain valid. We'll slice to the chosen window after predicting.)
 if isinstance(date_range, (list, tuple)) and len(date_range) == 2:
     start_date, end_date = pd.to_datetime(date_range[0]), pd.to_datetime(date_range[1])
 else:
     start_date, end_date = default_start, default_end
 
-# Keep only features that actually exist in the data
-available_features = [c for c in feature_columns if c in series_df.columns]
-missing = sorted(set(feature_columns) - set(available_features))
-if missing:
-    st.info(f"Using {len(available_features)} features. Missing in data: {missing}")
+valid_features = [col for col in feature_columns if col in series_df.columns]
+X_full = series_df[valid_features].copy()
+X_full = X_full.drop(columns=[c for c in ['unit_sales', 'date', 'id'] if c in X_full.columns])
 
-X_full = series_df[available_features].copy()
-# Ensure we don't pass target/date by accident
-for col in ['unit_sales', 'date']:
-    if col in X_full.columns:
-        X_full.drop(columns=[col], inplace=True)
 
 # Predict across the full series, then cut to the selected dates
 if not X_full.empty:

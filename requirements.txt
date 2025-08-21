@@ -7,3 +7,5 @@ XGBoost==3.0.4
 seaborn==0.13.2
 statsmodels==0.14.5
 scikit-learn==1.7.1
+pyarrow.parquet==21.0.0
+mlflow ==3.3.1
